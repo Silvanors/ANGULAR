@@ -29,6 +29,11 @@ export class CourseService {
             return this.httpClient.put<Course>(`${this.coursesUrl}`, course);
         }
     }
+
+    deleteById(id: number): Observable<any> {
+        return this.httpClient.delete<any>(`${this.coursesUrl}/${id}`);
+    }
+
 }
 
 
